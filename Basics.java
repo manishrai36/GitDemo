@@ -14,7 +14,7 @@ public class Basics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		RestAssured.baseURI="https://rahulshettyacademy.com";
+	System.out.println("This is your updated version");	RestAssured.baseURI="https://rahulshettyacademy.com";
 		String response=given().log().all().queryParam("key","qaclick123").header("Content-Type","application/json;charset=UTF-8")
 		.body(Payload.file()).when().post("maps/api/place/add/json")
 					.then().statusCode(200)
